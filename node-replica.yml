@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: node-app-rs
+spec:
+ replicas: 3
+ template:
+    metadata:
+     name: node-app
+     labels:
+       app: node-app
+       owner: vibhas
+       type: backend
+    spec:
+      imagePullSecrets:
+      - name: docker-hub-cred  
+      containers:
+       - name: node-api
+         image: vibhashdfclife/k8-node-app:v2
+ selector:
+   matchLabels:
+      app: node-app
+      type: backend

@@ -1,0 +1,4 @@
+kubectl create secret docker-registry docker-hub-cred --docker-username vibhashdfclife --docker-password yourpassword
+
+IF we use above then we have to specify imagePullSecrets section but there an alternate
+https://www.baeldung.com/ops/kubectl-run-image-pull-secret
