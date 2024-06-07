@@ -11,5 +11,5 @@ spec:
    - name: docker-hub-cred 
  containers:
    - name: node-api
-     image: vibhashdfclife/k8-node-app:v2
+     image: dockerusername/k8-node-app:v2
   
